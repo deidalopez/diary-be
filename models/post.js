@@ -15,6 +15,10 @@ const PostSchema = new Schema(
       type: String,
       required: true,
     },
+    user_id: {
+      type: Schema.Types.ObjectId,
+      ref: "User", // this tells Mongoose that this is referencing something from the User model
+    },
   },
   {
     collection: "posts",
